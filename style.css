@@ -1,3 +1,74 @@
+@font-face {
+    font-family: 'Malibu  Ring';
+    src: url('fonts/Malibu-Ring.eot');
+    src: url('fonts/Malibu-Ring.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Malibu-Ring.woff2') format('woff2'),
+         url('fonts/Malibu-Ring.woff') format('woff'),
+         url('fonts/Malibu-Ring.ttf')  format('truetype'),
+         url('fonts/Malibu-Ring.svg#Malibu  Ring') format('svg');
+}
+
+body {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 400;
+  font-style: normal;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.script {
+    font-family: 'Malibu  Ring', cursive;
+    font-weight: normal;
+}
+
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#content {
+    text-align: center;
+}
+
+#title {
+    font-size: 3em;
+    margin: 0.2em;
+    position: relative; /* Needed for pseudo-elements */
+    padding: 0 2em; /* Add padding to avoid text overlapping lines */
+}
+
+#title::before,
+#title::after {
+    content: "";
+    position: absolute;
+    width: 100%; /* Adjust width as needed */
+    height: 1px; /* Adjust height for line thickness */
+    background-color: black;
+    z-index: -1;
+}
+
+#title::before {
+    top: -0.5em; /* Position line above the heading */
+    left: 0;
+}
+
+#title::after {
+    bottom: -0.5em; /* Position line below the heading */
+    left: 0;
+}
+
+.subtitle {
+    margin: 0 90px;
+    padding: 0;
+    background-color: white;
+    z-index: 2;
+}
+
 .image-container {
     display: flex;
     flex-direction: column;
