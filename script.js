@@ -2,6 +2,11 @@
 const allowedPages = [
     { page: "allday.html", password: "tea" },
     { page: "evening.html", password: "pizza" },
+    { page: "invite.html", password: "RG21" },
+    { page: "howtofindus.html", password: "RG21" },
+    { page: "gifts.html", password: "RG21" },
+    { page: "recommendations.html", password: "RG21" },
+    { page: "faqs.html", password: "RG21" },
     // Add more pages here as needed
 ];
 

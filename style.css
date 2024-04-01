@@ -2,26 +2,45 @@
     font-family: 'Malibu  Ring';
     src: url('fonts/Malibu-Ring.eot');
     src: url('fonts/Malibu-Ring.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Malibu-Ring.woff2') format('woff2'),
-         url('fonts/Malibu-Ring.woff') format('woff'),
-         url('fonts/Malibu-Ring.ttf')  format('truetype'),
-         url('fonts/Malibu-Ring.svg#Malibu  Ring') format('svg');
+    url('fonts/Malibu-Ring.woff2') format('woff2'),
+    url('fonts/Malibu-Ring.woff') format('woff'),
+    url('fonts/Malibu-Ring.ttf')  format('truetype'),
+    url('fonts/Malibu-Ring.svg#Malibu  Ring') format('svg');
 }
 
 body {
   font-family: "Abhaya Libre", serif;
-  font-weight: 400;
+  font-weight: 400 !important;
   font-style: normal;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  letter-spacing: 0.2em;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.5em;
 }
 
 .script {
     font-family: 'Malibu  Ring', cursive;
     font-weight: normal;
+}
+
+h1 {
+    font-family: 'Malibu  Ring', cursive;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+
+h2 {
+    font-family: 'Malibu  Ring', cursive;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.allcaps {
+    text-transform: uppercase;
 }
 
 #loading-screen {
@@ -39,7 +58,7 @@ body {
     font-size: 3em;
     margin: 0.2em;
     position: relative; /* Needed for pseudo-elements */
-    padding: 0 2em; /* Add padding to avoid text overlapping lines */
+    padding: 0.5em 2em; /* Add padding to avoid text overlapping lines */
 }
 
 #title::before,
@@ -63,12 +82,57 @@ body {
 }
 
 .subtitle {
-    margin: 0 90px;
-    padding: 0;
+    font-family: "Abhaya Libre", serif;
+    display: inline;
+    padding: 0 40px;
     background-color: white;
     z-index: 2;
+    font-weight: 400;
 }
 
+#passwordForm {
+    padding-top: 100px;
+}
+
+/* Invite */
+#invitecontent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#us {
+    min-width: 300px;
+    order: 1; /* Initially, image comes first */
+}
+
+#us img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#uscaption {
+    position: absolute;
+    bottom:  10px;
+    left: 0;
+    right: 50%;
+}
+
+#invite {
+    min-width: 400px;
+    order: 2; /* Initially, text comes second */
+}
+
+#names {
+    font-size: 1.8em;
+    line-height: 1.5em;
+}
+
+/* Save the date */
 .image-container {
     display: flex;
     flex-direction: column;
