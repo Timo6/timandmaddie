@@ -1,12 +1,12 @@
 // Define allowed pages and their corresponding passwords
 const allowedPages = [
-    { page: "allday.html", password: "tea" },
-    { page: "evening.html", password: "pizza" },
-    { page: "invite.html", password: "RG21" },
-    { page: "howtofindus.html", password: "RG21" },
-    { page: "gifts.html", password: "RG21" },
-    { page: "recommendations.html", password: "RG21" },
-    { page: "faqs.html", password: "RG21" },
+    { page: "invite.html", password: "FURLONG" },
+    { page: "howtofindus.html", password: "FURLONG" },
+    { page: "gifts.html", password: "FURLONG" },
+    { page: "recommendations.html", password: "FURLONG" },
+    { page: "faqs.html", password: "FURLONG" },
+    { page: "contact.html", password: "FURLONG" },
+    { page: "photos.html", password: "FURLONG" },
     // Add more pages here as needed
 ];
 
@@ -44,9 +44,15 @@ function redirectToIndex() {
     }
 }
 
+// Function to normalize password input (case insensitive, remove spaces)
+function normalizePassword(password) {
+    return password.toUpperCase().replace(/\s/g, '');
+}
+
+
 // Check session token and password on page load
 window.addEventListener("DOMContentLoaded", function() {
-    const password = getPasswordFromUrl();
+    const password = normalizePassword(getPasswordFromUrl());
 
     if (!password || !checkSessionToken(password)) {
         redirectToIndex();
@@ -68,7 +74,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 document.getElementById("passwordForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form submission
-    var password = document.getElementById("password").value;
+    var password = normalizePassword(document.getElementById("password").value);
 
     // Check password and redirect accordingly
     const page = allowedPages.find(page => page.password === password);
