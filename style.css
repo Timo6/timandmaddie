@@ -116,7 +116,9 @@ h2 {
     font-size: 3em;
     margin: 0.2em;
     position: relative; /* Needed for pseudo-elements */
-    padding: 0.5em 2em; /* Add padding to avoid text overlapping lines */
+    padding: 0.5em 0; /* Add padding to avoid text overlapping lines */
+    width: calc(100vw - 40px);
+	max-width: 600px;
 }
 
 #title::before,
