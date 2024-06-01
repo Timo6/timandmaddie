@@ -7,6 +7,7 @@ const allowedPages = [
     { page: "faqs.html", password: "FURLONG" },
     { page: "contact.html", password: "FURLONG" },
     { page: "photos.html", password: "FURLONG" },
+    { page: "live.html", password: "FURLONG" },
     // Add more pages here as needed
 ];
 
