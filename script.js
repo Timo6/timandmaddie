@@ -1,13 +1,21 @@
 // Define allowed pages and their corresponding passwords
 const allowedPages = [
     { page: "invite.html", password: "FURLONG" },
+    { page: "invite", password: "FURLONG" },
     { page: "howtofindus.html", password: "FURLONG" },
+    { page: "howtofindus", password: "FURLONG" },
     { page: "gifts.html", password: "FURLONG" },
+    { page: "gifts", password: "FURLONG" },
     { page: "recommendations.html", password: "FURLONG" },
+    { page: "recommendations", password: "FURLONG" },
     { page: "faqs.html", password: "FURLONG" },
+    { page: "faqs", password: "FURLONG" },
     { page: "contact.html", password: "FURLONG" },
+    { page: "contact", password: "FURLONG" },
     { page: "photos.html", password: "FURLONG" },
+    { page: "photos", password: "FURLONG" },
     { page: "live.html", password: "FURLONG" },
+    { page: "live", password: "FURLONG" },
     // Add more pages here as needed
 ];
 
